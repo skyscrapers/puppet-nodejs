@@ -6,7 +6,7 @@ class nodejs::repo::nodesource::apt {
   $pin        = $nodejs::repo::nodesource::pin
   $url_suffix = $nodejs::repo::nodesource::url_suffix
 
-  ensure_packages(['apt-transport-https', 'ca-certificates'])
+  ensure_packages(['apt-transport-https', 'ca-certificates'], {'ensure' => 'latest'})
 
   include ::apt
 
