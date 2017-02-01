@@ -45,11 +45,11 @@ class nodejs(
           validate_re($repo_url_suffix, '^(0\.1[02]|[456]\.x)x$', $suffix_error_msg)
         }
         elsif $::operatingsystemrelease =~ /^1[246]\.04$/ { #LTS
-          validate_re($repo_url_suffix, '^(0\.1[02]|[456]\.x)$', $suffix_error_msg)
+          validate_re($repo_url_suffix, '^(0\.1[02]|[4567]\.x)$', $suffix_error_msg)
         }
         # All NodeJS versions are available for Debian 7 and 8
         else {
-          validate_re($repo_url_suffix, '^(0\.1[02]|[456]\.x)$', $suffix_error_msg)
+          validate_re($repo_url_suffix, '^(0\.1[02]|[4567]\.x)$', $suffix_error_msg)
         }
       }
       'RedHat': {
